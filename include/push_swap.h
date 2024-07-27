@@ -17,4 +17,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }   t_stack;
 
+int ft_just_numbers(char *str);
+
+
 #endif
