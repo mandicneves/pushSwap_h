@@ -3,7 +3,7 @@ LIBFT = $(LIBFT_PATH)/libft.a
 
 NAME = push_swap
 
-SRC_FILES = input_checks.c checks_utils.c
+SRC_FILES = input_checks.c check_utils.c
 
 SRC_DIR = sources
 
