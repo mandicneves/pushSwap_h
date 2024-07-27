@@ -57,3 +57,25 @@ int ft_is_zero(char *argv)
     return (1);
 }
 
+int ft_input_checks(char **argv)
+{
+    int i;
+    int num_zero;
+
+    i = 1;
+    num_zero = 0;
+    while (argv[i])
+    {
+        if (!argv[i][0])
+            return (1);
+        if (ft_just_numbers(argv[i]) == 1)
+            return (1);
+        if (ft_repeated_numbers(&argv[i]) == 1)
+            return (1);
+        num_zero += ft_is_zero(argv[i]);
+        i++;
+    }
+    if (num_zero > 1)
+        return (1);
+    return (0);
+}
