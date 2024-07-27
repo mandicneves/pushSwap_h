@@ -4,10 +4,7 @@ int main(int argc, char **argv)
 {
     if (argc == 1)
 		return (1);
-	if (correct_input(argv) == 1)
-	{
-		ft_putstr_fd("Error\n", 2);
-		exit(1);
-	}
+	if (ft_input_checks(argv))
+        ft_putendl_fd("ok", 1);
     return (0);
 }
