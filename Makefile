@@ -1,47 +1,47 @@
-# LIBFT_PATH = ./library_libft
-# LIBFT = $(LIBFT_PATH)/libft.a
+LIBFT_PATH = ./library_libft
+LIBFT = $(LIBFT_PATH)/libft.a
 
-# NAME = push_swap
+NAME = push_swap
 
-# SRC_FILES = 
+SRC_FILES = checks_utils.c input_checks.c
 
-# SRC_DIR = sources
+SRC_DIR = sources
 
-# OBJ_DIR = objects
+OBJ_DIR = objects
 
-# HEADER = ./include/push_swap.h
+HEADER = ./include/push_swap.h
 
-# SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
+SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
-# OBJ = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+OBJ = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-# CC = cc
-# RM = rm -rf
+CC = cc
+RM = rm -rf
 
-# CFLAGS = -O3 -Wall -Wextra -Werror
+CFLAGS = -O3 -Wall -Wextra -Werror
 
-# $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER)
-# 				$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER)
+				$(CC) $(CFLAGS) -c $< -o $@
 
-# all: $(NAME)
+all: $(NAME)
 
-# $(NAME): $(LIBFT) $(OBJ_DIR) $(OBJ) $(HEADER)
-# 		$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -lm -o $(NAME)
+$(NAME): $(LIBFT) $(OBJ_DIR) $(OBJ) $(HEADER)
+		$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -lm -o $(NAME)
 
-# $(LIBFT):
-# 		$(MAKE) -C $(LIBFT_PATH)
+$(LIBFT):
+		$(MAKE) -C $(LIBFT_PATH)
 
-# $(OBJ_DIR):
-# 			mkdir -p $(OBJ_DIR)
+$(OBJ_DIR):
+			mkdir -p $(OBJ_DIR)
 
-# clean:
-# 		$(MAKE) -C $(LIBFT_PATH) clean
-# 		$(RM) $(OBJ_DIR)
+clean:
+		$(MAKE) -C $(LIBFT_PATH) clean
+		$(RM) $(OBJ_DIR)
 
-# fclean: clean
-# 		$(MAKE) -C $(LIBFT_PATH) fclean
-# 		$(RM) $(NAME)
+fclean: clean
+		$(MAKE) -C $(LIBFT_PATH) fclean
+		$(RM) $(NAME)
 
-# re: fclean all
+re: fclean all
 
-# .PHONY: all clean fclean re libft
+.PHONY: all clean fclean re libft
