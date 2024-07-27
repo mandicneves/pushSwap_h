@@ -1,4 +1,4 @@
-LIBFT_PATH = ./library_libft
+LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
 NAME = push_swap
