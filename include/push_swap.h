@@ -28,7 +28,7 @@ int ft_input_checks(char **argv);
 int ft_is_zero(char *argv);
 void    ft_rotate_rr(t_stack **a_stack, t_stack **b_stack, int a, int b);
 void    ft_reverse_rotate_rrr(t_stack **a_stack, t_stack **b_stack, int a, int b);
-void    ft_move_stack_a(t_stack **a_stack, int target_pos);
+void    ft_move_stack_a(t_stack **a_stack, int curret_pos);
 
 
 #endif

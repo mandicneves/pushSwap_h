@@ -30,14 +30,14 @@ void    ft_reverse_rotate_rrr(t_stack **a_stack, t_stack **b_stack, int a, int b
     ft_make_rrr(a_stack, b_stack);
 }
 
-void    ft_move_stack_a(t_stack **a_stack, int target_pos)
+void    ft_move_stack_a(t_stack **a_stack, int curret_pos)
 {
     t_stack *flow;
 
     flow = *a_stack;
     while (flow)
     {
-        if (flow->index == target_pos)
+        if (flow->index == curret_pos)
         {
             while (flow->a_cost != 0)
             {
@@ -57,3 +57,5 @@ void    ft_move_stack_a(t_stack **a_stack, int target_pos)
         flow = flow->next;
     }
 }
+
+void    ft_move_stack_b(t_stack **b_stack, int )
