@@ -13,9 +13,9 @@ typedef struct s_stack
 	int				index;
 	int				pos;
 	int				target_pos;
-	int				cost_a;
-	int				cost_b;
-	int				total_cost;
+	int				a_cost;
+	int				b_cost;
+	int				cost_total;
 	struct s_stack	*next;
 }   t_stack;
 
