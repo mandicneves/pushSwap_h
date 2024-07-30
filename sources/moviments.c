@@ -29,3 +29,31 @@ void    ft_reverse_rotate_rrr(t_stack **a_stack, t_stack **b_stack, int a, int b
     flow->b_cost++;
     ft_make_rrr(a_stack, b_stack);
 }
+
+void    ft_move_stack_a(t_stack **a_stack, int target_pos)
+{
+    t_stack *flow;
+
+    flow = *a_stack;
+    while (flow)
+    {
+        if (flow->index == target_pos)
+        {
+            while (flow->a_cost != 0)
+            {
+                if (flow->a_cost > 0)
+                {
+                    ft_make_rotate_a(a_stack);
+                    flow->a_cost--;
+                }
+                if (flow->a_cost < 0)
+                {
+                    ft_make_reverse_rotate_a(a_stack);
+                    flow->a_cost++;
+                }
+            }
+            return ;
+        }
+        flow = flow->next;
+    }
+}
