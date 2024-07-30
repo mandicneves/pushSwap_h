@@ -58,4 +58,30 @@ void    ft_move_stack_a(t_stack **a_stack, int curret_pos)
     }
 }
 
-void    ft_move_stack_b(t_stack **b_stack, int )
+void    ft_move_stack_b(t_stack **b_stack, int current_pos)
+{
+    t_stack *flow;
+
+    flow = *b_stack;
+    while (flow)
+    {
+        if (flow->pos == current_pos)
+        {
+            while (flow->b_cost != 0)
+            {
+                if (flow->b_cost > 0)
+                {
+                    ft_make_rotate_b(b_stack);
+                    flow->b_cost--;
+                }
+                if (flow->b_cost < 0)
+                {
+                    ft_make_reverse_rotate_b(b_stack);
+                    flow->b_cost++;
+                }
+            }
+            return ;
+        }
+        flow = flow->next;
+    }
+}
