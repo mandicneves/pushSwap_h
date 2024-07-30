@@ -26,6 +26,7 @@ int ft_support_repeated_numbers(const char *s1, const char *s2);
 int ft_repeated_numbers(char **argv);
 int ft_input_checks(char **argv);
 int ft_is_zero(char *argv);
+void    ft_rotate_rr(t_stack **a_stack, t_stack **b_stack, int a, int b);
 
 
 #endif
