@@ -1,6 +1,6 @@
 #include "../include/push_swap.h"
 
-void    ft_rotate_reverse(t_stack **stack)
+void    ft_reverse_rotate(t_stack **stack)
 {
     t_stack *temp;
     t_stack *last;
@@ -12,4 +12,10 @@ void    ft_rotate_reverse(t_stack **stack)
     *stack = last;
     (*stack)->next = temp;
     penultimate->next = NULL;
+}
+
+void    ft_make_reverse_rotate_a(t_stack **a_stack)
+{
+    ft_reverse_rotate(a_stack);
+    ft_putstr_fd("rra\n", 1);
 }
