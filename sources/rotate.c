@@ -23,3 +23,10 @@ void    ft_make_rotate_b(t_stack **b_stack)
     ft_rotate(b_stack);
     ft_putstr_fd("rb\n", 1);
 }
+
+void    ft_make_rotate_a_and_b(t_stack **a_stack, t_stack **b_stack)
+{
+    ft_rotate(a_stack);
+    ft_rotate(b_stack);
+    ft_putstr_fd("rr\n", 1);
+}
