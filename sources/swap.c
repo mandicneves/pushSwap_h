@@ -19,3 +19,9 @@ void    ft_make_swap_a(t_stack **a_stack)
     ft_swap(a_stack);
     ft_putstr_fd("sa\n", 1);
 }
+
+void    ft_make_swap_b(t_stack **b_stack)
+{
+    ft_swap(b_stack);
+    ft_putstr_fd("sb\n", 1);
+}
