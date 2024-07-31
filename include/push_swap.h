@@ -39,6 +39,7 @@ void    ft_rotate(t_stack **stack);
 void    ft_make_rotate_a(t_stack **a_stack);
 void    ft_make_rotate_b(t_stack **b_stack);
 void    ft_make_rotate_a_and_b(t_stack **a_stack, t_stack **b_stack);
+void    ft_rotate_reverse(t_stack **stack);
 
 
 #endif
