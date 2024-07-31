@@ -19,3 +19,9 @@ void    ft_make_reverse_rotate_a(t_stack **a_stack)
     ft_reverse_rotate(a_stack);
     ft_putstr_fd("rra\n", 1);
 }
+
+void    ft_make_reverse_rotate_b(t_stack **b_stack)
+{
+    ft_reverse_rotate(b_stack);
+    ft_putstr_fd("rrb\n", 1);
+}
