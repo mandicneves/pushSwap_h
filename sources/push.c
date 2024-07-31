@@ -11,3 +11,9 @@ void    ft_push(t_stack **src, t_stack **dest)
     temp->next = *dest;
     *dest = temp;
 }
+
+void    ft_make_push_a(t_stack **a_stack, t_stack **b_stack)
+{
+    ft_push(b_stack, a_stack);
+    ft_putstr_fd("pa\n", 1);
+}
