@@ -2,86 +2,86 @@
 
 void    ft_rotate_rr(t_stack **a_stack, t_stack **b_stack, int a, int b)
 {
-    t_stack *flow;
+    t_stack *node;
 
-    flow = *a_stack;
-    while (flow && flow->index != a)
-        flow = flow->next;
-    flow->a_cost--;
-    flow = *b_stack;
-    while (flow && flow->index != b)
-        flow = flow->next;
-    flow->b_cost--;
+    node = *a_stack;
+    while (node && node->index != a)
+        node = node->next;
+    node->a_cost--;
+    node = *b_stack;
+    while (node && node->index != b)
+        node = node->next;
+    node->b_cost--;
     ft_make_rr(a_stack, b_stack);
 }
 
 void    ft_reverse_rotate_rrr(t_stack **a_stack, t_stack **b_stack, int a, int b)
 {
-    t_stack *flow;
+    t_stack *node;
 
-    flow = *a_stack;
-    while (flow && flow->index != a)
-        flow = flow->next;
-    flow->a_cost++;
-    flow = *b_stack;
-    while (flow && flow->index != b)
-        flow = flow->next;
-    flow->b_cost++;
+    node = *a_stack;
+    while (node && node->index != a)
+        node = node->next;
+    node->a_cost++;
+    node = *b_stack;
+    while (node && node->index != b)
+        node = node->next;
+    node->b_cost++;
     ft_make_rrr(a_stack, b_stack);
 }
 
 void    ft_move_stack_a(t_stack **a_stack, int curret_pos)
 {
-    t_stack *flow;
+    t_stack *node;
 
-    flow = *a_stack;
-    while (flow)
+    node = *a_stack;
+    while (node)
     {
-        if (flow->index == curret_pos)
+        if (node->index == curret_pos)
         {
-            while (flow->a_cost != 0)
+            while (node->a_cost != 0)
             {
-                if (flow->a_cost > 0)
+                if (node->a_cost > 0)
                 {
                     ft_make_rotate_a(a_stack);
-                    flow->a_cost--;
+                    node->a_cost--;
                 }
-                if (flow->a_cost < 0)
+                if (node->a_cost < 0)
                 {
                     ft_make_reverse_rotate_a(a_stack);
-                    flow->a_cost++;
+                    node->a_cost++;
                 }
             }
             return ;
         }
-        flow = flow->next;
+        node = node->next;
     }
 }
 
 void    ft_move_stack_b(t_stack **b_stack, int current_pos)
 {
-    t_stack *flow;
+    t_stack *node;
 
-    flow = *b_stack;
-    while (flow)
+    node = *b_stack;
+    while (node)
     {
-        if (flow->position == current_pos)
+        if (node->position == current_pos)
         {
-            while (flow->b_cost != 0)
+            while (node->b_cost != 0)
             {
-                if (flow->b_cost > 0)
+                if (node->b_cost > 0)
                 {
                     ft_make_rotate_b(b_stack);
-                    flow->b_cost--;
+                    node->b_cost--;
                 }
-                if (flow->b_cost < 0)
+                if (node->b_cost < 0)
                 {
                     ft_make_reverse_rotate_b(b_stack);
-                    flow->b_cost++;
+                    node->b_cost++;
                 }
             }
             return ;
         }
-        flow = flow->next;
+        node = node->next;
     }
 }
