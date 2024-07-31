@@ -65,7 +65,7 @@ void    ft_move_stack_b(t_stack **b_stack, int current_pos)
     flow = *b_stack;
     while (flow)
     {
-        if (flow->pos == current_pos)
+        if (flow->position == current_pos)
         {
             while (flow->b_cost != 0)
             {

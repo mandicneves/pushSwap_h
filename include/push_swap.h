@@ -11,11 +11,11 @@ typedef struct s_stack
 {
     int				value;
 	int				index;
-	int				pos;
-	int				target_pos;
+	int				position;
+	int				target_position;
 	int				a_cost;
 	int				b_cost;
-	int				cost_total;
+	int				all_cost;
 	struct s_stack	*next;
 }   t_stack;
 
