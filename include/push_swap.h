@@ -34,6 +34,7 @@ void    ft_have_position(t_stack **stack);
 void    ft_have_target_position(t_stack **a_stack, t_stack **b_stack);
 void    ft_push(t_stack **src, t_stack **dest);
 void    ft_make_push_a(t_stack **a_stack, t_stack **b_stack);
+void    ft_make_push_b(t_stack **a_stack, t_stack **b_stack);
 
 
 #endif
