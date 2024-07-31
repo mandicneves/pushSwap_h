@@ -1,6 +1,6 @@
 #include "../include/push_swap.h"
 
-void    have_position(t_stack **stack)
+void    ft_have_position(t_stack **stack)
 {
     t_stack *temp;
     int i;
