@@ -11,3 +11,9 @@ void    ft_rotate(t_stack **stack)
     last->next = temp;
     temp->next = NULL;
 }
+
+void    ft_make_rotate_a(t_stack **a_stack)
+{
+    ft_rotate(a_stack);
+    ft_putstr_fd("ra\n", 1);
+}
