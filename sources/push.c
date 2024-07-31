@@ -17,3 +17,9 @@ void    ft_make_push_a(t_stack **a_stack, t_stack **b_stack)
     ft_push(b_stack, a_stack);
     ft_putstr_fd("pa\n", 1);
 }
+
+void    ft_make_push_b(t_stack **a_stack, t_stack **b_stack)
+{
+    ft_push(a_stack, b_stack);
+    ft_putstr_fd("pb\n", 1);
+}
