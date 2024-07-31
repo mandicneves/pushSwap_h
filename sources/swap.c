@@ -13,3 +13,9 @@ void    ft_swap(t_stack **stack)
     second->next = top;
     *stack = second;
 }
+
+void    ft_make_swap_a(t_stack **a_stack)
+{
+    ft_swap(a_stack);
+    ft_putstr_fd("sa\n", 1);
+}
