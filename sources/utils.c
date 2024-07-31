@@ -28,3 +28,12 @@ long int    ft_atol(const char *nptr)
     }
     return (result * sign);
 }
+
+int ft_sum_cost(int a, int b)
+{
+    if (a < 0)
+        a *= -1;
+    if (b < 0)
+        b *= -1;
+    return (a + b);
+}
