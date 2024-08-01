@@ -73,5 +73,7 @@ void    ft_sort(t_stack **a_stack, t_stack **b_stack);
 void    ft_sorting_stack_a(t_stack **a_stack);
 void    ft_sort_small(t_stack **stack);
 int ft_is_sorted(t_stack *stack);
+void    ft_push_swap(t_stack **a_stack, t_stack **b_stack, int stack_size);
+
 
 #endif
