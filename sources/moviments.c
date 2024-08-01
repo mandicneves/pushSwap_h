@@ -12,7 +12,7 @@ void    ft_rotate_rr(t_stack **a_stack, t_stack **b_stack, int a, int b)
     while (node && node->index != b)
         node = node->next;
     node->b_cost--;
-    ft_make_rr(a_stack, b_stack);
+    ft_make_rotate_a_and_b(a_stack, b_stack);
 }
 
 void    ft_reverse_rotate_rrr(t_stack **a_stack, t_stack **b_stack, int a, int b)
@@ -27,7 +27,7 @@ void    ft_reverse_rotate_rrr(t_stack **a_stack, t_stack **b_stack, int a, int b
     while (node && node->index != b)
         node = node->next;
     node->b_cost++;
-    ft_make_rrr(a_stack, b_stack);
+    ft_make_reverse_rotate_a_and_b                                                          (a_stack, b_stack);
 }
 
 void    ft_move_stack_a(t_stack **a_stack, int curret_pos)
