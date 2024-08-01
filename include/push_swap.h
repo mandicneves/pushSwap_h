@@ -54,6 +54,7 @@ void    ft_error_handler(t_stack **stack);
 int ft_get_stack_size(t_stack *stack);
 t_stack *ft_add_node(int nbr);
 void    ft_add_node_at_end(t_stack **stack, t_stack *new);
+t_stack *ft_get_list_last_element(t_stack *stack);
 
 
 #endif
