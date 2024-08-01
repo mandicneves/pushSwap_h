@@ -21,3 +21,22 @@ t_stack *ft_initial_stack(int argc, char **argv)
     }
     return (a_stack);
 }
+
+void    ft_assigning_indexes(t_stack *a_stack)
+{
+    t_stack *node;
+    t_stack *comparator;
+
+    node = a_stack;
+    while (node)
+    {
+        comparator = a_stack;
+        while (comparator)
+        {
+            if (comparator->value < node->value)
+                node->index++;
+            comparator = comparator->next;
+        }
+        node = node->next;
+    }
+}
