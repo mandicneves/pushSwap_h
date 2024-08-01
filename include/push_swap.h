@@ -50,6 +50,7 @@ void    ft_make_swap_a_and_b(t_stack **a_stack, t_stack **b_stack);
 long int    ft_atol(const char *nptr);
 int ft_sum_cost(int a, int b);
 void    ft_free_stack(t_stack **stack);
+void    ft_error_handler(t_stack **stack);
 
 
 #endif
