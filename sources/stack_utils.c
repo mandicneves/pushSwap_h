@@ -55,3 +55,10 @@ t_stack *ft_get_list_last_element(t_stack *stack)
         stack = stack->next;
     return (stack);
 }
+
+t_stack *ft_get_list_penultimate_element(t_stack *stack)
+{
+    while (stack && stack->next && stack->next->next != NULL)
+        stack = stack->next;
+    return (stack);
+}
