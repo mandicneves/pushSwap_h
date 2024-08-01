@@ -40,3 +40,17 @@ void    ft_assigning_indexes(t_stack *a_stack)
         current_node = current_node->next;
     }
 }
+
+int ft_largest_index_value(t_stack *stack)
+{
+    int index;
+
+    index = stack->index;
+    while (stack)
+    {
+        if (index < stack->index)
+            index = stack->index;
+        stack = stack->next;
+    }
+    return (index);
+}
