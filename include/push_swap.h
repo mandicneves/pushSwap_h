@@ -67,6 +67,7 @@ void    ft_calc_cost_b(t_stack *b_stack);
 void    ft_calc_total_cost(t_stack **a_stack, t_stack **b_stack);
 int ft_get_cost_cheaper(t_stack **b_stack);
 void    ft_push_to_stack_b(t_stack **a_stack, t_stack **b_stack);
+void    ft_get_best_operation(t_stack **a_stack, t_stack **b_stack);
 
 
 #endif
