@@ -18,3 +18,21 @@ void    ft_push_to_stack_b(t_stack **a_stack, t_stack **b_stack)
             ft_make_rotate_a(a_stack);
     }
 }
+
+void    ft_sort(t_stack **a_stack, t_stack **b_stack)
+{
+    ft_push_to_stack_b(a_stack, b_stack);
+    ft_function(a_stack);
+    while (*b_stack)
+    {
+        ft_have_position(a_stack);
+        ft_have_position(b_stack);
+        ft_have_target_position(a_stack, b_stack);
+        ft_get_cost(a_stack, b_stack);
+        ft_calc_total_cost(a_stack, b_stack);
+        ft_get_best_operation(a_stack, b_stack);
+    }
+    ft_have_position(a_stack);
+    if (ft_is_sorted(*a_stack) == 1)
+        ft_sorting_stack_a(a_stack);
+}
