@@ -59,6 +59,7 @@ t_stack *ft_get_list_penultimate_element(t_stack *stack);
 t_stack *ft_initial_stack(int argc, char **argv);
 void    ft_assigning_indexes(t_stack *a_stack);
 int ft_largest_index_value(t_stack *stack);
+int ft_lowest_position(t_stack *stack);
 
 
 #endif
