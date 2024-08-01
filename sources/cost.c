@@ -27,5 +27,19 @@ void    ft_calc_cost_a(t_stack *a_stack)
 
 void    ft_calc_cost_b(t_stack *b_stack)
 {
-    
+    t_stack *current_node;
+    int stack_size;
+    int middle;
+
+    stack_size = ft_get_stack_size(b_stack);
+    current_node = b_stack;
+    middle = (stack_size + 1) / 2;
+    while (current_node)
+    {
+        if (current_node->position <= middle)
+            current_node->b_cost = current_node->position;
+        else
+            current_node->b_cost = (stack_size - current_node->position) * -1;
+        current_node = current_node->next;
+    }
 }
