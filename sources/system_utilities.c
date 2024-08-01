@@ -14,3 +14,10 @@ void    ft_free_stack(t_stack **stack)
         *stack = temp;
     }
 }
+
+void    ft_error_handler(t_stack **stack)
+{
+    ft_free_stack(stack);
+    ft_putstr_fd("Error\n", 2);
+    exit(1);
+}
