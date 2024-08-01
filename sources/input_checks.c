@@ -76,16 +76,6 @@ int ft_is_zero(char *argv)
 	if (argv[i] != '\0')
 		return (0);
 	return (1);
-    // int i;
-
-    // i = 0;
-    // if (ft_has_sign(argv[i]))
-    //     i++;
-    // while (argv[i] && argv[i] == '0')
-    //     i++;
-    // if (argv[i])
-    //     return (0);
-    // return (1);
 }
 
 int ft_input_checks(char **argv)
