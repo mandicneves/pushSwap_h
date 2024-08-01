@@ -43,3 +43,24 @@ void    ft_calc_cost_b(t_stack *b_stack)
         current_node = current_node->next;
     }
 }
+
+void    ft_calc_total_cost(t_stack **a_stack, t_stack **b_stack)
+{
+    t_stack *a_current;
+    t_stack *b_current;
+
+    a_current = *a_stack;
+    while (a_current)
+    {
+        b_current = *b_stack;
+        while (b_current)
+        {
+            if (b_current->target_position == a_current->index)
+            {
+                b_current->all_cost = ft_sum_cost(a_current->a_cost, b_current->b_cost);
+            }
+            b_current = b_current->next;
+        }
+        a_current = a_current->next;
+    }
+}
