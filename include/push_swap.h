@@ -52,6 +52,7 @@ int ft_sum_cost(int a, int b);
 void    ft_free_stack(t_stack **stack);
 void    ft_error_handler(t_stack **stack);
 int ft_get_stack_size(t_stack *stack);
+t_stack *ft_add_node(int nbr);
 
 
 #endif
