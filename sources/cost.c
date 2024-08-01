@@ -64,3 +64,19 @@ void    ft_calc_total_cost(t_stack **a_stack, t_stack **b_stack)
         a_current = a_current->next;
     }
 }
+
+int ft_get_cost_cheaper(t_stack **b_stack)
+{
+    t_stack *current_node;
+    int low_cost;
+
+    current_node = *b_stack;
+    low_cost = current_node->all_cost;
+    while (current_node)
+    {
+        if (low_cost > current_node->all_cost)
+            low_cost = current_node->all_cost;
+        current_node = current_node->next;
+    }
+    return (low_cost);
+}
