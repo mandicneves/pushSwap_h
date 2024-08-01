@@ -48,3 +48,10 @@ void    ft_add_node_at_end(t_stack **stack, t_stack *new)
     temp = ft_get_list_last_element(*stack);
     temp->next = new;
 }
+
+t_stack *ft_get_list_last_element(t_stack *stack)
+{
+    while (stack && stack->next != NULL)
+        stack = stack->next;
+    return (stack);
+}
