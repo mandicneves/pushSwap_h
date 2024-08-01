@@ -51,6 +51,7 @@ long int    ft_atol(const char *nptr);
 int ft_sum_cost(int a, int b);
 void    ft_free_stack(t_stack **stack);
 void    ft_error_handler(t_stack **stack);
+int ft_get_stack_size(t_stack *stack);
 
 
 #endif
