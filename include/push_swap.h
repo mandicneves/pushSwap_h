@@ -61,6 +61,7 @@ void    ft_assigning_indexes(t_stack *a_stack);
 int ft_largest_index_value(t_stack *stack);
 int ft_lowest_position(t_stack *stack);
 int ft_indexes_average(t_stack *stack);
+void    ft_get_cost(t_stack **a_stack, t_stack **b_stack);
 
 
 #endif
