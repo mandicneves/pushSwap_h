@@ -57,6 +57,7 @@ void    ft_add_node_at_end(t_stack **stack, t_stack *new);
 t_stack *ft_get_list_last_element(t_stack *stack);
 t_stack *ft_get_list_penultimate_element(t_stack *stack);
 t_stack *ft_initial_stack(int argc, char **argv);
+void    ft_assigning_indexes(t_stack *a_stack);
 
 
 #endif
