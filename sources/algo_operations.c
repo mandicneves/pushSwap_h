@@ -2,8 +2,8 @@
 
 void    ft_get_best_operation(t_stack **a_stack, t_stack **b_stack)
 {
-    t_stack *current_node;
-    int low_cost;
+    t_stack     *current_node;
+    int         low_cost;
 
     current_node = *b_stack;
     low_cost = ft_get_cost_cheaper(b_stack);
