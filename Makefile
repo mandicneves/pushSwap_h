@@ -5,7 +5,9 @@ LIBFT = $(LIBFT_PATH)/libft.a
 
 NAME = push_swap
 
-SRC_FILES = input_checks.c check_utils.c main.c
+SRC_FILES = algo_operations.c check_utils.c cost.c input_checks.c main.c moviments.c \
+position.c push.c rotate_reverse.c rotate.c sort.c stack_utils.c stack.c swap.c \
+system_utilities.c utils.c
 
 SRC_DIR = sources
 
@@ -29,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJ_DIR) $(OBJ) $(HEADER)
 		@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -lm -o $(NAME)
-		@echo "$(GREEN)Push_swap Done!"
+		@echo "$(GREEN)Compilation done!"
 
 $(LIBFT):
 		@$(MAKE) -C $(LIBFT_PATH) >/dev/null
@@ -44,6 +46,7 @@ clean:
 fclean: clean
 		@$(MAKE) -C $(LIBFT_PATH) fclean > /dev/null
 		@$(RM) $(NAME)
+		@echo "$(GREEN) Cleaning done!"
 
 re: fclean all
 

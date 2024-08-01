@@ -58,19 +58,20 @@ int ft_largest_index_value(t_stack *stack)
 int ft_lowest_position(t_stack *stack)
 {
     int index;
-    int min_position;
+    int min_pos;
 
+    min_pos = 0;
     index = stack->index;
     while (stack)
     {
         if (index > stack->index)
         {
-            min_position = stack->position;
+            min_pos = stack->position;
             index = stack->index;
         }
         stack = stack->next;
     }
-    return (min_position);
+    return (min_pos);
 }
 
 int ft_indexes_average(t_stack *stack)
