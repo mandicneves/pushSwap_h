@@ -22,7 +22,7 @@ void    ft_push_to_stack_b(t_stack **a_stack, t_stack **b_stack)
 void    ft_sort(t_stack **a_stack, t_stack **b_stack)
 {
     ft_push_to_stack_b(a_stack, b_stack);
-    ft_function(a_stack);
+    ft_sort_small(a_stack);
     while (*b_stack)
     {
         ft_have_position(a_stack);
@@ -60,4 +60,14 @@ void    ft_sorting_stack_a(t_stack **a_stack)
             low_position--;
         }
     }
+}
+
+void    ft_sort_small(t_stack **stack)
+{
+    if ((*stack)->index == ft_largest_index_value(*stack))
+        ft_make_rotate_a(stack);
+    else if ((*stack)->next->index == ft_largest_index_value(*stack))
+        ft_make_reverse_rotate_a(stack);
+    if (ft_is_sorted(*stack) == 1)
+        ft_make_swap_a(stack);
 }
