@@ -72,3 +72,18 @@ int ft_lowest_position(t_stack *stack)
     }
     return (min_position);
 }
+
+int ft_indexes_average(t_stack *stack)
+{
+    int result;
+    int stack_size;
+
+    result = 0;
+    stack_size = ft_get_stack_size(stack);
+    while (stack)
+    {
+        result += stack->index;
+        stack = stack->next;
+    }
+    return (result / stack_size);
+}
