@@ -71,6 +71,6 @@ void    ft_get_best_operation(t_stack **a_stack, t_stack **b_stack);
 void    ft_moviments(t_stack **a_stack, t_stack **b_stack, int target_position, int position);
 void    ft_sort(t_stack **a_stack, t_stack **b_stack);
 void    ft_sorting_stack_a(t_stack **a_stack);
-
+void    ft_sort_small(t_stack **stack);
 
 #endif
