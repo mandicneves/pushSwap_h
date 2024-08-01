@@ -24,19 +24,19 @@ t_stack *ft_initial_stack(int argc, char **argv)
 
 void    ft_assigning_indexes(t_stack *a_stack)
 {
-    t_stack *node;
-    t_stack *comparator;
+    t_stack *current_node;
+    t_stack *current_comparator;
 
-    node = a_stack;
-    while (node)
+    current_node = a_stack;
+    while (current_node)
     {
-        comparator = a_stack;
-        while (comparator)
+        current_comparator = a_stack;
+        while (current_comparator)
         {
-            if (comparator->value < node->value)
-                node->index++;
-            comparator = comparator->next;
+            if (current_comparator->value < current_node->value)
+                current_node->index++;
+            current_comparator = current_comparator->next;
         }
-        node = node->next;
+        current_node = current_node->next;
     }
 }
