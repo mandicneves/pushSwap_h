@@ -62,11 +62,6 @@ int ft_support_repeated_numbers(const char *s1, const char *s2)
 		j++;
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
-    // if (s1[0] == '+' && s2[0] != '+')
-    //     s1++;
-    // else if (s1[0] != '+' && s2[0] == '+')
-    //     s2++;
-    // return (ft_strcmp(s1, s2));
 }
 
 int ft_is_zero(char *argv)
