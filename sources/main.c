@@ -1,10 +1,12 @@
 #include "../include/push_swap.h"
 
-// int main(int argc, char **argv)
-// {
-//     if (argc == 1)
-// 		return (1);
-// 	if (ft_input_checks(argv))
-//         ft_putendl_fd("ok", 1);
-//     return (0);
-// }
+int ft_is_sorted(t_stack *stack)
+{
+    while (stack->next != NULL)
+    {
+        if (stack->value > stack->next->value)
+            return (1);
+        stack = stack->next;
+    }
+    return (0);
+}
