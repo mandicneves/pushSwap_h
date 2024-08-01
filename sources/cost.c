@@ -24,3 +24,8 @@ void    ft_calc_cost_a(t_stack *a_stack)
         current_node = current_node->next;
     }
 }
+
+void    ft_calc_cost_b(t_stack *b_stack)
+{
+    
+}
