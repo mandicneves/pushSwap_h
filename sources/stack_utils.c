@@ -32,3 +32,19 @@ t_stack *ft_add_node(int nbr)
     new_node->next = NULL;
     return (new_node);
 }
+
+void    ft_node_list(t_stack **stack, t_stack *new)
+{
+    t_stack *temp;
+
+    temp = NULL;
+    if (!new)
+        return ;
+    if (!*stack)
+    {
+        *stack = new;
+        return ;
+    }
+    temp = ft_get_list_last_element(*stack);
+    temp->next = new;
+}
