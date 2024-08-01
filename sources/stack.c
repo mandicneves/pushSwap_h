@@ -54,3 +54,21 @@ int ft_largest_index_value(t_stack *stack)
     }
     return (index);
 }
+
+int ft_lowest_position(t_stack *stack)
+{
+    int index;
+    int min_position;
+
+    index = stack->index;
+    while (stack)
+    {
+        if (index > stack->index)
+        {
+            min_position = stack->position;
+            index = stack->index;
+        }
+        stack = stack->next;
+    }
+    return (min_position);
+}
