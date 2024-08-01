@@ -33,7 +33,7 @@ t_stack *ft_add_node(int nbr)
     return (new_node);
 }
 
-void    ft_node_list(t_stack **stack, t_stack *new)
+void    ft_add_node_at_end(t_stack **stack, t_stack *new)
 {
     t_stack *temp;
 
